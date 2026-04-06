@@ -68,11 +68,14 @@ The work integrates **aerodynamic design, stability analysis, and control system
 ---
 
 ## Repository Structure
-
 ├── data/ # Aerodynamic data
+
 ├── src/ # MATLAB scripts and models
+
 ├── docs/ # Reports and documentation
+
 ├── results/ # Simulation outputs and plots
+
 └── README.md
 
 
