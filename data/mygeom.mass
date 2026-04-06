@@ -1,0 +1,31 @@
+#UAV
+# x,y,z coordinate system matches AVL default
+Lunit = 1.0 m
+Munit = 1.0 kg
+Tunit = 1.0 s
+#-------------------------
+# Gravity and density for trim setup
+g   = 9.81
+rho = 1.225
+#-------------------------
+# Mass and Inertia breakdown
+# x y z  is location of item's own CG
+# Ixx... are item's inertias about item's own CG
+#
+# x,y,z must match the .avl coordinate system exactly
+#
+#mass    x        y        z        Ixx      Iyy      Izz      Ixy  Ixz  Iyz
+0.754    0.1024   0.0000   0.2646   0.4118   0.00412  0.4159   0    0    0    ! Wing (b=2.56m c=0.256m, LE@x=0 z=0.22)
+0.500    0.9683   0.0000   0.0020   0.01750  0.001094 0.01859  0    0    0    ! H-tail (b=0.648m c=0.162m, LE@x=0.9035)
+0.200    1.0477   0.0000   0.2185   0.00318  0.00398  0.00080  0    0    0    ! V-tail (b=0.437m c=0.219m, LE@x=0.9035 to 1.0166)
+0.235   -0.4800   0.0000   0.0000   0.000    0.000    0.000    0    0    0    ! Motor + prop (nose tip)
+1.200   -0.2626   0.0000   0.0000   0.000    0.000    0.000    0    0    0    ! Battery 4S 13Ah (CG trim - adjust x to move CG)
+0.288   -0.3000   0.0000   0.0000   0.000    0.000    0.000    0    0    0    ! Nose structure
+0.546    0.3000   0.0000   0.0000   0.000    0.000    0.000    0    0    0    ! Mid fuselage structure
+0.300    0.7000   0.0000   0.0000   0.000    0.000    0.000    0    0    0    ! Rear fuselage structure
+0.020    0.9035   0.0000   0.0000   0.000    0.000    0.000    0    0    0    ! Elevator servo (at H-tail LE)
+0.020    0.9035   0.0000   0.1100   0.000    0.000    0.000    0    0    0    ! Rudder servo (at V-tail base, z=0.11)
+0.750   -0.1000   0.0000  -0.0800   0.000    0.000    0.000    0    0    0    ! Payload cameras (under fuselage, nadir view)
+0.067   -0.4000   0.0000   0.0000   0.000    0.000    0.000    0    0    0    ! Nose wheel
+0.020    0.1500   0.8300   0.2778   0.000    0.000    0.000    0    0    0    ! Right aileron servo (y=0.83 aileron start)
+0.020    0.1500  -0.8300   0.2778   0.000    0.000    0.000    0    0    0    ! Left aileron servo

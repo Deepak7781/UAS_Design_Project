@@ -1,0 +1,134 @@
+TigerEye
+#Mach
+0.044
+#IYsym  IZsym  Zsym
+0       0      0.0
+#Sref   Cref   Bref
+0.6562  0.256  2.56
+#Xref   Yref   Zref
+0.116   0.0    0.0
+
+#====================================================================
+SURFACE
+Wing
+#Nchordwise  Cspace  Nspanwise  Sspace
+8            1.0     12         1.0
+
+YDUPLICATE
+0.0
+
+ANGLE
+3.0
+
+#-------------------------------------------------------------
+SECTION
+#Xle    Yle    Zle     Chord  Ainc  Nspanwise  Sspace
+0.      0.     0.22    0.256  0.0   12         1
+NACA
+4412
+
+#-------------------------------------------------------------
+SECTION
+#Xle    Yle    Zle     Chord  Ainc  Nspanwise  Sspace
+0.      0.83   0.2778  0.256  0.0   12         1
+NACA
+4412
+
+CONTROL
+#Cname   Cgain  Xhinge  Xvec  Yvec  Zvec  SgnDup
+Aileron  1.0    0.65    0.0   1.0   0.0   -1.0
+
+#-------------------------------------------------------------
+SECTION
+#Xle    Yle    Zle     Chord  Ainc  Nspanwise  Sspace
+0.      1.28   0.3092  0.256  0.0   12         1
+NACA
+4412
+
+CONTROL
+#Cname   Cgain  Xhinge  Xvec  Yvec  Zvec  SgnDup
+Aileron  1.0    0.65   0.0   1.0   0.0   -1.0
+
+#====================================================================
+SURFACE
+HorizontalTail
+#Nchordwise  Cspace  Nspanwise  Sspace
+8            1.0     12         1.0
+
+YDUPLICATE
+0.0
+
+ANGLE
+-1.5
+
+#-------------------------------------------------------------
+SECTION
+#Xle     Yle    Zle  Chord  Ainc  Nspanwise  Sspace
+0.9035   0.     0.   0.162  0.0   12         1
+NACA
+0012
+
+#-------------------------------------------------------------
+SECTION
+#Xle     Yle    Zle  Chord  Ainc  Nspanwise  Sspace
+0.9035   0.081  0.   0.162  0.0   12         1
+NACA
+0012
+
+CONTROL
+#Cname    Cgain  Xhinge  Xvec  Yvec  Zvec  SgnDup
+Elevator  1.0    0.82    0.0   1.0   0.0   1.0
+
+#-------------------------------------------------------------
+SECTION
+#Xle     Yle    Zle  Chord  Ainc  Nspanwise  Sspace
+0.9035   0.324  0.   0.162  0.0   12         1
+NACA
+0012
+
+CONTROL
+#Cname    Cgain  Xhinge  Xvec  Yvec  Zvec  SgnDup
+Elevator  1.0    0.82    0.0   1.0   0.0   1.0
+
+#====================================================================
+SURFACE
+VerticalTail
+#Nchordwise  Cspace  Nspanwise  Sspace
+8            1.0     12         1.0
+
+#  NOTE: NO YDUPLICATE here - fin is a single surface, not symmetric
+#  Adding YDUPLICATE would create a second fin mirrored below the fuselage
+
+ANGLE
+0.0
+
+#-------------------------------------------------------------
+SECTION
+#Xle      Yle  Zle     Chord  Ainc  Nspanwise  Sspace
+0.9035    0.   0.      0.219  0.0   12         1
+NACA
+0012
+
+#-------------------------------------------------------------
+#  Section 2: mid-point where rudder begins
+SECTION
+#Xle        Yle  Zle      Chord  Ainc  Nspanwise  Sspace
+0.920465    0.   0.06555  0.219  0.0   12         1
+NACA
+0012
+
+CONTROL
+#Cname  Cgain  Xhinge  Xvec  Yvec  Zvec  SgnDup
+Rudder  1.0    0.67    0.0   0.0   1.0   1.0
+
+#-------------------------------------------------------------
+#  Section 3: TIP - must come last (Zle=0.437, highest z)
+SECTION
+#Xle     Yle  Zle    Chord  Ainc  Nspanwise  Sspace
+1.0166   0.   0.437  0.219  0.0   12         1
+NACA
+0012
+
+CONTROL
+#Cname  Cgain  Xhinge  Xvec  Yvec  Zvec  SgnDup
+Rudder  1.0    0.67    0.0   0.0   1.0   1.0
