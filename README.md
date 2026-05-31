@@ -81,12 +81,3 @@ The work integrates **aerodynamic design, stability analysis, and control system
 
 ---
 
-## How to Run
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Deepak7781/UAS_Design_Project.git
-Open MATLAB
-
-Run the main script:
-run.m
-View simulation results and plots
